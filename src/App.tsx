@@ -22,6 +22,8 @@ import { NakshatraPage } from '@/pages/nakshatra/NakshatraPage';
 import { KundliPage } from '@/pages/kundli/KundliPage';
 import { TemplesPage } from '@/pages/temples/TemplesPage';
 import { RecipesPage } from '@/pages/recipes/RecipesPage';
+import { YogaPage } from '@/pages/yoga/YogaPage';
+import { SamvatConverter } from '@/pages/samvat/SamvatConverter';
 
 function PlaceholderPage({ title }: { title: string }) {
   return (
@@ -62,6 +64,8 @@ export default function App() {
               <Route path="/kundli" element={<KundliPage />} />
               <Route path="/temples" element={<TemplesPage />} />
               <Route path="/recipes" element={<RecipesPage />} />
+              <Route path="/yoga" element={<YogaPage />} />
+              <Route path="/samvat" element={<SamvatConverter />} />
               <Route path="/search" element={<SearchPage />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />

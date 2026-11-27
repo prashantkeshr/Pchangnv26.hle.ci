@@ -4,7 +4,8 @@ import {
   Menu, X, Sun, Moon, MapPin, ChevronDown,
   Calendar, Star, Clock, BookOpen, Search, Settings,
   Sunrise, MoonStar, Telescope, Heart, CalendarHeart, GraduationCap,
-  UserCircle, Globe, Sparkles, CircleDot, Landmark, CookingPot
+  UserCircle, Globe, Sparkles, CircleDot, Landmark, CookingPot,
+  Flower2, CalendarRange
 } from 'lucide-react';
 import { CelestialIcon } from '@/components/icons/CelestialIcon';
 import { useTheme } from '@/context/ThemeContext';
@@ -28,6 +29,8 @@ const NAV_ITEMS = [
   { path: '/kundli', label: 'Kundli', icon: CircleDot },
   { path: '/temples', label: 'Temples', icon: Landmark },
   { path: '/recipes', label: 'Recipes', icon: CookingPot },
+  { path: '/yoga', label: 'Yoga', icon: Flower2 },
+  { path: '/samvat', label: 'Samvat', icon: CalendarRange },
 ];
 
 export function Header() {

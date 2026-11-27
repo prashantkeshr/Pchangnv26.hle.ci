@@ -31,6 +31,8 @@ const PAGES: SearchResult[] = [
   { type: 'page', title: 'Kundli', titleHi: 'कुंडली', description: 'Vedic birth chart with sidereal planetary positions and North Indian chart.', link: '/kundli' },
   { type: 'page', title: 'Temples & Pilgrimages', titleHi: 'मन्दिर और तीर्थयात्रा', description: 'Sacred temples of India with pilgrimage circuits.', link: '/temples' },
   { type: 'page', title: 'Prasad & Recipes', titleHi: 'प्रसाद और व्यंजन', description: 'Sacred food offerings, fasting recipes and festive sweets.', link: '/recipes' },
+  { type: 'page', title: 'Yoga & Meditation', titleHi: 'योग एवं ध्यान', description: 'Yoga asanas, pranayama, mantras, meditation timer and techniques.', link: '/yoga' },
+  { type: 'page', title: 'Samvat Converter', titleHi: 'संवत् परिवर्तक', description: 'Convert between Indian calendar eras — Vikram, Shaka, Kali Yuga, Bengali and more.', link: '/samvat' },
   { type: 'page', title: 'Settings', titleHi: 'सेटिंग्स', description: 'Theme, location, and app preferences.', link: '/settings' },
 ];
 
