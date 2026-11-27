@@ -1,12 +1,11 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': import.meta.dirname + '/src',
     },
   },
   server: {
@@ -15,10 +14,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          astronomy: ['astronomy-engine'],
-          icons: ['lucide-react'],
+        manualChunks(id) {
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/') || id.includes('node_modules/react-router')) return 'vendor';
+          if (id.includes('node_modules/astronomy-engine')) return 'astronomy';
+          if (id.includes('node_modules/lucide-react')) return 'icons';
         },
       },
     },
