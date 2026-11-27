@@ -1,0 +1,232 @@
+.page {
+  flex: 1;
+  padding: var(--space-6) 0 var(--space-12);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.titleHi {
+  font-size: var(--text-lg);
+  color: var(--text-accent);
+  font-family: var(--font-serif);
+  margin-top: var(--space-1);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-top: var(--space-2);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--space-2) var(--space-3) var(--space-2) 36px;
+  font-size: var(--text-sm);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  background: var(--surface-card);
+  color: var(--text-primary);
+}
+
+.searchInput::placeholder { color: var(--text-tertiary); }
+.searchInput:focus { border-color: var(--accent-primary); outline: none; }
+
+.filters {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--text-tertiary);
+}
+
+.select {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  background: var(--surface-card);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.typeChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.chip {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.chip:hover {
+  border-color: var(--border-secondary);
+  background: var(--surface-highlight);
+}
+
+.chipActive {
+  background: var(--chip-color, var(--accent-primary));
+  color: white;
+  border-color: var(--chip-color, var(--accent-primary));
+}
+
+.empty {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.monthGroup {}
+
+.monthHeading {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--accent-primary);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--border-accent);
+  margin-bottom: var(--space-4);
+}
+
+.festList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.festCard {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--surface-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.festCard:hover {
+  border-color: var(--border-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.festDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+}
+
+.festDay {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.festWeekday {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.festBody {
+  flex: 1;
+}
+
+.festHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.festName {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.festNameHi {
+  font-size: var(--text-sm);
+  color: var(--text-accent);
+  font-family: var(--font-serif);
+}
+
+.festDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+.festTags {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.typeBadge {
+  padding: 2px var(--space-2);
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.regionBadge {
+  padding: 2px var(--space-2);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+}

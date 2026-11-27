@@ -1,0 +1,157 @@
+.page {
+  flex: 1;
+  padding: var(--space-6) 0 var(--space-12);
+}
+
+.hero { text-align: center; margin-bottom: var(--space-6); }
+.title { font-size: var(--text-2xl); font-weight: 700; }
+.subtitle { font-size: var(--text-sm); color: var(--text-tertiary); margin-top: var(--space-2); }
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.themeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.themeBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 2px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.themeBtn:hover {
+  border-color: var(--border-secondary);
+  background: var(--surface-highlight);
+}
+
+.themeActive {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: var(--surface-active);
+}
+
+.themeLabel {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.themeLabelHi {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-family: var(--font-serif);
+}
+
+.locationInfo {
+  margin-bottom: var(--space-4);
+}
+
+.currentLocation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--surface-active);
+  border-radius: var(--radius-md);
+  color: var(--accent-primary);
+}
+
+.locName {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.locCoords {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+@media (min-width: 480px) {
+  .cityGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.cityBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.cityBtn:hover {
+  border-color: var(--border-secondary);
+  background: var(--surface-highlight);
+}
+
+.cityActive {
+  border-color: var(--accent-primary);
+  background: var(--surface-active);
+}
+
+.cityName {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cityState {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.aboutTitle {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.aboutText {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.aboutMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--surface-highlight);
+  border-radius: var(--radius-sm);
+}
+
+.aboutRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+}
+
+.aboutRow span:first-child { color: var(--text-secondary); }
+.aboutRow span:last-child { font-weight: 500; color: var(--text-primary); }

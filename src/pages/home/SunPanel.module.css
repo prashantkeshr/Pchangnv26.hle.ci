@@ -1,0 +1,66 @@
+.sunArc {
+  margin-bottom: var(--space-4);
+}
+
+.arcSvg {
+  width: 100%;
+  height: auto;
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.timeItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.riseIcon {
+  color: var(--color-orange);
+}
+
+.setIcon {
+  color: var(--color-gold-muted);
+}
+
+.timeLabel {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.timeValue {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detailLabel {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.detailValue {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-weight: 500;
+}

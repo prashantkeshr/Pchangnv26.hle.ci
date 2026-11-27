@@ -1,0 +1,80 @@
+.phaseDisplay {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.phaseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.phaseName {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.illumination {
+  font-size: var(--text-sm);
+  color: var(--text-accent);
+}
+
+.age {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.timeItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeLabel {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.timeValue {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.upcoming {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.upcomingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upcomingLabel {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.upcomingValue {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-weight: 500;
+}

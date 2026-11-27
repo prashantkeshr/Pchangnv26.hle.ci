@@ -1,0 +1,265 @@
+.page {
+  flex: 1;
+  padding: var(--space-6) 0 var(--space-12);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  margin-top: var(--space-2);
+}
+
+.dateNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-primary);
+  transition: all var(--transition-fast);
+}
+
+.navBtn:hover {
+  color: var(--text-primary);
+  background: var(--surface-highlight);
+}
+
+.dateLabel {
+  font-size: var(--text-base);
+  font-weight: 600;
+  min-width: 180px;
+  text-align: center;
+}
+
+.todayBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--accent-primary);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+}
+
+.todayBtn:hover { background: var(--surface-active); }
+
+.datePicker {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  background: var(--surface-card);
+  color: var(--text-primary);
+  color-scheme: light dark;
+}
+
+.sunInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-5);
+  padding: var(--space-4);
+  background: var(--surface-highlight);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.sunItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.sunLabel {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+}
+
+.sunValue {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.empty {
+  text-align: center;
+  padding: var(--space-12);
+  color: var(--text-tertiary);
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .twoCol {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.timelineItem.active {
+  background: var(--surface-active);
+}
+
+.timelineBar {
+  width: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+.auspicious .timelineBar { background: var(--color-green); }
+.inauspicious .timelineBar { background: var(--color-red); }
+
+.timelineContent { flex: 1; }
+
+.timelineName {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.auspicious .timelineName svg { color: var(--color-green); }
+.inauspicious .timelineName svg { color: var(--color-red); }
+
+.timelineNameHi {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  font-family: var(--font-serif);
+}
+
+.nowBadge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-primary);
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.timelineTime {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  margin-top: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Muhurat Cards */
+.muhuratList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.muhuratCard {
+  padding: var(--space-3);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+}
+
+.muhuratHeader {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  margin-bottom: var(--space-2);
+}
+
+.auspiciousIcon { color: var(--color-green); }
+.inauspiciousIcon { color: var(--color-red); }
+
+.muhuratName {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.muhuratNameHi {
+  font-size: var(--text-xs);
+  color: var(--text-accent);
+  font-family: var(--font-serif);
+}
+
+.muhuratTime {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.muhuratDesc {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+}
+
+.significance {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  background: var(--surface-highlight);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  line-height: var(--leading-relaxed);
+}
+
+.significance svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--accent-primary);
+}
