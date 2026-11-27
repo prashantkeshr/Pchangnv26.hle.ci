@@ -36,7 +36,7 @@ const NAV_ITEMS = [
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [locationOpen, setLocationOpen] = useState(false);
-  const { theme, setTheme, resolved } = useTheme();
+  const { setTheme, resolved } = useTheme();
   const { location, setLocation, cities } = useLocation();
   const routerLocation = useRouterLocation();
 

@@ -298,8 +298,6 @@ export const ELEMENT_COLORS: Record<string, string> = {
 export function getDailyInsight(rashi: Rashi, date: Date): { career: string; health: string; love: string; finance: string; overall: number } {
   const seed = date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDate();
   const rashiIdx = RASHIS.indexOf(rashi);
-  const hash = ((seed * 31 + rashiIdx * 17) % 997) / 997;
-
   const careerOptions = [
     'Focus on collaborative projects today. Teamwork brings unexpected rewards.',
     'An opportunity for professional growth may present itself. Stay alert.',

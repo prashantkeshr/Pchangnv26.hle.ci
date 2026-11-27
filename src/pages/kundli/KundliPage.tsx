@@ -50,7 +50,7 @@ function getSiderealPositions(date: Date): PlanetPos[] {
       const ecl = Astronomy.Ecliptic(geo);
       lon = ecl.elon;
     } else {
-      lon = Astronomy.EclipticLongitude(p.body, t);
+      lon = Astronomy.EclipticLongitude(p.body as Astronomy.Body, t);
     }
     const sid = ((lon - AYANAMSA) % 360 + 360) % 360;
     const sign = Math.floor(sid / 30);
@@ -92,21 +92,6 @@ function NorthIndianChart({ lagnaSign, planets }: { lagnaSign: number; planets: 
   const size = 320;
   const half = size / 2;
   const houseOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-
-  const housePositions: Array<{ x: number; y: number }> = [
-    { x: half, y: 20 },
-    { x: size - 60, y: 20 },
-    { x: size - 30, y: half - 40 },
-    { x: size - 60, y: half + 10 },
-    { x: half, y: half + 10 },
-    { x: 60, y: half + 10 },
-    { x: 30, y: half - 40 },
-    { x: 60, y: 20 },
-    { x: half, y: half - 40 },
-    { x: size - 30, y: 20 },
-    { x: size - 30, y: half + 10 },
-    { x: 30, y: half + 10 },
-  ];
 
   const planetsByHouse: Record<number, string[]> = {};
   for (const p of planets) {
