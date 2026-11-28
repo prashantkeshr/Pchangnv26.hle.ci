@@ -4,6 +4,7 @@ import { useLocation } from '@/context/LocationContext';
 import { getSunData, getMoonData } from '@/calculations/astronomy';
 import { getFullPanchang } from '@/calculations/panchang';
 import { getAllMuhurats } from '@/calculations/muhurat';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { DateHero } from './DateHero';
 import { PanchangPanel } from './PanchangPanel';
 import { SunPanel } from './SunPanel';
@@ -15,6 +16,7 @@ import styles from './Dashboard.module.css';
 export function Dashboard() {
   const { selectedDate } = useDate();
   const { location } = useLocation();
+  const gridRef = useScrollReveal();
 
   const sunData = useMemo(
     () => getSunData(selectedDate, location.lat, location.lng),
@@ -43,7 +45,7 @@ export function Dashboard() {
     <main className={styles.dashboard}>
       <div className="container">
         <DateHero panchang={panchang} />
-        <div className={styles.grid}>
+        <div className={`${styles.grid} stagger-children`} ref={gridRef}>
           <PanchangPanel panchang={panchang} />
           <SunPanel data={sunData} />
           <MoonPanel data={moonData} />

@@ -1,16 +1,25 @@
 import { CelestialIcon } from '@/components/icons/CelestialIcon';
+import { LotusFlower } from '@/components/decorative/SacredGeometry';
 import styles from './Footer.module.css';
 
 export function Footer() {
   return (
     <footer className={styles.footer}>
+      <div className={styles.sacredDivider}>
+        <span className={styles.dividerLine} />
+        <LotusFlower size={40} opacity={0.3} />
+        <span className={styles.dividerLine} />
+      </div>
       <div className={`container ${styles.inner}`}>
         <div className={styles.brand}>
-          <CelestialIcon size={20} />
+          <CelestialIcon size={22} />
           <span className={styles.brandName}>Panchang</span>
         </div>
         <p className={styles.tagline}>
           Indian Calendar, Panchang & Celestial Intelligence
+        </p>
+        <p className={styles.taglineHi}>
+          भारतीय पंचांग एवं खगोलीय बुद्धिमत्ता
         </p>
         <div className={styles.links}>
           <span className={styles.link}>About</span>

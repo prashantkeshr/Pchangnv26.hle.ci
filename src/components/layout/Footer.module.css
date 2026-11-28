@@ -1,8 +1,23 @@
 .footer {
   margin-top: auto;
-  border-top: 1px solid var(--border-primary);
   background: var(--bg-secondary);
   padding: var(--space-8) 0;
+  position: relative;
+}
+
+.sacredDivider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: 0 var(--gutter);
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-6);
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
 }
 
 .inner {
@@ -20,14 +35,25 @@
 }
 
 .brandName {
-  font-size: var(--text-base);
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tagline {
   font-size: var(--text-sm);
   color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.taglineHi {
+  font-size: var(--text-xs);
+  color: var(--text-accent);
+  font-family: var(--font-serif);
+  margin-top: calc(-1 * var(--space-2));
 }
 
 .links {
@@ -41,11 +67,14 @@
 .link {
   color: var(--text-secondary);
   cursor: pointer;
-  transition: color var(--transition-fast);
+  transition: color 0.25s ease;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
 }
 
 .link:hover {
   color: var(--accent-primary);
+  background: var(--surface-highlight);
 }
 
 .sep {

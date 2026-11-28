@@ -5,7 +5,7 @@ import {
   Calendar, Star, Clock, BookOpen, Search, Settings,
   Sunrise, MoonStar, Telescope, Heart, CalendarHeart, GraduationCap,
   UserCircle, Globe, Sparkles, CircleDot, Landmark, CookingPot,
-  Flower2, CalendarRange
+  Flower2, CalendarRange, Hash, Feather
 } from 'lucide-react';
 import { CelestialIcon } from '@/components/icons/CelestialIcon';
 import { useTheme } from '@/context/ThemeContext';
@@ -31,6 +31,8 @@ const NAV_ITEMS = [
   { path: '/recipes', label: 'Recipes', icon: CookingPot },
   { path: '/yoga', label: 'Yoga', icon: Flower2 },
   { path: '/samvat', label: 'Samvat', icon: CalendarRange },
+  { path: '/numerology', label: 'Numerology', icon: Hash },
+  { path: '/wisdom', label: 'Wisdom', icon: Feather },
 ];
 
 export function Header() {

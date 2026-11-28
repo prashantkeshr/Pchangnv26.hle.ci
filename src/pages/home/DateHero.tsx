@@ -1,7 +1,8 @@
-import { ChevronLeft, ChevronRight, CalendarDays } from 'lucide-react';
+import { ChevronLeft, ChevronRight, CalendarDays, Sparkles } from 'lucide-react';
 import { useDate } from '@/context/DateContext';
 import { useLocation } from '@/context/LocationContext';
 import { formatDateLong, getDayName, getGreetingTime } from '@/utils/format';
+import { MandalaRing, FloatingParticles } from '@/components/decorative/SacredGeometry';
 import type { PanchangData } from '@/types';
 import styles from './DateHero.module.css';
 
@@ -23,6 +24,12 @@ export function DateHero({ panchang }: Props) {
 
   return (
     <section className={styles.hero}>
+      <div className={styles.heroDecor}>
+        <MandalaRing size={300} className={styles.mandalaLeft} opacity={0.06} />
+        <MandalaRing size={300} className={styles.mandalaRight} opacity={0.06} />
+        <FloatingParticles count={15} />
+      </div>
+
       <div className={styles.top}>
         <div className={styles.greeting}>
           <h1 className={styles.greetingText}>{greeting[0]}</h1>
@@ -78,19 +85,36 @@ export function DateHero({ panchang }: Props) {
 
       <div className={styles.quickInfo}>
         <span className={styles.quickItem}>
-          <span className={styles.quickLabel}>{panchang.vaarHi}</span>
+          <span className={styles.quickLabel}>वार</span>
+          <span>{panchang.vaarHi}</span>
         </span>
+        <span className={styles.quickDivider} />
         <span className={styles.quickItem}>
           <span className={styles.quickLabel}>तिथि</span>
           <span>{panchang.tithi.nameHi}</span>
         </span>
+        <span className={styles.quickDivider} />
         <span className={styles.quickItem}>
           <span className={styles.quickLabel}>नक्षत्र</span>
           <span>{panchang.nakshatra.nameHi}</span>
         </span>
+        <span className={styles.quickDivider} />
         <span className={styles.quickItem}>
           <span className={styles.quickLabel}>पक्ष</span>
           <span>{panchang.paksha === 'Shukla' ? 'शुक्ल' : 'कृष्ण'}</span>
+        </span>
+        <span className={styles.quickDivider} />
+        <span className={styles.quickItem}>
+          <span className={styles.quickLabel}>योग</span>
+          <span>{panchang.yoga.nameHi}</span>
+        </span>
+      </div>
+
+      <div className={styles.shlokaTicker}>
+        <Sparkles size={12} className={styles.shlokaIcon} />
+        <span className={styles.shlokaText}>
+          सर्वे भवन्तु सुखिनः · सर्वे सन्तु निरामयाः · सर्वे भद्राणि पश्यन्तु · मा कश्चिद्दुःखभाग्भवेत् ·
+          ॐ शांतिः शांतिः शांतिः
         </span>
       </div>
     </section>

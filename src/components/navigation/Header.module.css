@@ -2,10 +2,14 @@
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  background: var(--bg-primary);
   border-bottom: 1px solid var(--border-primary);
-  backdrop-filter: blur(12px);
-  background: color-mix(in srgb, var(--bg-primary) 85%, transparent);
+  backdrop-filter: blur(16px) saturate(1.4);
+  background: color-mix(in srgb, var(--bg-primary) 80%, transparent);
+  transition: box-shadow 0.3s ease;
+}
+
+.header:hover {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
 }
 
 .inner {
@@ -25,12 +29,21 @@
   text-decoration: none;
   color: var(--text-primary);
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.brand:hover {
+  transform: scale(1.03);
 }
 
 .brandName {
   font-size: var(--text-lg);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: var(--tracking-tight);
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav {
@@ -211,7 +224,31 @@
     gap: var(--space-1);
     overflow-y: auto;
     z-index: var(--z-overlay);
+    animation: fadeIn 0.25s ease both;
   }
+
+  .nav.navOpen .navLink {
+    animation: fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .nav.navOpen .navLink:nth-child(1) { animation-delay: 0ms; }
+  .nav.navOpen .navLink:nth-child(2) { animation-delay: 25ms; }
+  .nav.navOpen .navLink:nth-child(3) { animation-delay: 50ms; }
+  .nav.navOpen .navLink:nth-child(4) { animation-delay: 75ms; }
+  .nav.navOpen .navLink:nth-child(5) { animation-delay: 100ms; }
+  .nav.navOpen .navLink:nth-child(6) { animation-delay: 125ms; }
+  .nav.navOpen .navLink:nth-child(7) { animation-delay: 150ms; }
+  .nav.navOpen .navLink:nth-child(8) { animation-delay: 175ms; }
+  .nav.navOpen .navLink:nth-child(9) { animation-delay: 200ms; }
+  .nav.navOpen .navLink:nth-child(10) { animation-delay: 225ms; }
+  .nav.navOpen .navLink:nth-child(11) { animation-delay: 250ms; }
+  .nav.navOpen .navLink:nth-child(12) { animation-delay: 275ms; }
+  .nav.navOpen .navLink:nth-child(13) { animation-delay: 300ms; }
+  .nav.navOpen .navLink:nth-child(14) { animation-delay: 325ms; }
+  .nav.navOpen .navLink:nth-child(15) { animation-delay: 350ms; }
+  .nav.navOpen .navLink:nth-child(16) { animation-delay: 375ms; }
+  .nav.navOpen .navLink:nth-child(17) { animation-delay: 400ms; }
+  .nav.navOpen .navLink:nth-child(18) { animation-delay: 425ms; }
 
   .navLink {
     font-size: var(--text-base);

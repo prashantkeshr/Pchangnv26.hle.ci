@@ -1,10 +1,23 @@
 .sunArc {
   margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.sunArc::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, rgba(232, 135, 58, 0.06), transparent 70%);
+  pointer-events: none;
 }
 
 .arcSvg {
   width: 100%;
   height: auto;
+  filter: drop-shadow(0 0 6px rgba(196, 149, 106, 0.1));
 }
 
 .times {
@@ -52,6 +65,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+
+.detailRow:hover {
+  background: var(--surface-highlight);
 }
 
 .detailLabel {

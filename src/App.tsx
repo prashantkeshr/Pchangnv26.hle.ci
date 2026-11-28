@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { PageTransition } from '@/components/layout/PageTransition';
 import { ThemeProvider } from '@/context/ThemeContext';
 import { LocationProvider } from '@/context/LocationContext';
 import { DateProvider } from '@/context/DateContext';
@@ -24,6 +25,8 @@ import { TemplesPage } from '@/pages/temples/TemplesPage';
 import { RecipesPage } from '@/pages/recipes/RecipesPage';
 import { YogaPage } from '@/pages/yoga/YogaPage';
 import { SamvatConverter } from '@/pages/samvat/SamvatConverter';
+import { NumerologyPage } from '@/pages/numerology/NumerologyPage';
+import { DailyWisdomPage } from '@/pages/wisdom/DailyWisdomPage';
 
 function PlaceholderPage({ title }: { title: string }) {
   return (
@@ -32,11 +35,43 @@ function PlaceholderPage({ title }: { title: string }) {
         <h1 style={{ fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--text-primary)', marginBottom: 'var(--space-2)' }}>
           {title}
         </h1>
-        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--text-tertiary)' }}>
-          Coming soon
-        </p>
+        <p style={{ fontSize: 'var(--text-sm)', color: 'var(--text-tertiary)' }}>Coming soon</p>
       </div>
     </main>
+  );
+}
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  return (
+    <PageTransition key={location.pathname}>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/panchang" element={<PanchangPage />} />
+        <Route path="/calendar" element={<CalendarPage />} />
+        <Route path="/festivals" element={<FestivalsPage />} />
+        <Route path="/muhurat" element={<MuhuratPage />} />
+        <Route path="/astronomy" element={<AstronomyPage />} />
+        <Route path="/devotional" element={<DevotionalPage />} />
+        <Route path="/horoscope" element={<HoroscopePage />} />
+        <Route path="/vrat" element={<VratPage />} />
+        <Route path="/knowledge" element={<KnowledgePage />} />
+        <Route path="/personal" element={<PersonalCalendar />} />
+        <Route path="/regional" element={<RegionalCalendar />} />
+        <Route path="/nakshatra" element={<NakshatraPage />} />
+        <Route path="/kundli" element={<KundliPage />} />
+        <Route path="/temples" element={<TemplesPage />} />
+        <Route path="/recipes" element={<RecipesPage />} />
+        <Route path="/yoga" element={<YogaPage />} />
+        <Route path="/samvat" element={<SamvatConverter />} />
+        <Route path="/numerology" element={<NumerologyPage />} />
+        <Route path="/wisdom" element={<DailyWisdomPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />
+      </Routes>
+      <Footer />
+    </PageTransition>
   );
 }
 
@@ -47,30 +82,7 @@ export default function App() {
         <LocationProvider>
           <DateProvider>
             <Header />
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/panchang" element={<PanchangPage />} />
-              <Route path="/calendar" element={<CalendarPage />} />
-              <Route path="/festivals" element={<FestivalsPage />} />
-              <Route path="/muhurat" element={<MuhuratPage />} />
-              <Route path="/astronomy" element={<AstronomyPage />} />
-              <Route path="/devotional" element={<DevotionalPage />} />
-              <Route path="/horoscope" element={<HoroscopePage />} />
-              <Route path="/vrat" element={<VratPage />} />
-              <Route path="/knowledge" element={<KnowledgePage />} />
-              <Route path="/personal" element={<PersonalCalendar />} />
-              <Route path="/regional" element={<RegionalCalendar />} />
-              <Route path="/nakshatra" element={<NakshatraPage />} />
-              <Route path="/kundli" element={<KundliPage />} />
-              <Route path="/temples" element={<TemplesPage />} />
-              <Route path="/recipes" element={<RecipesPage />} />
-              <Route path="/yoga" element={<YogaPage />} />
-              <Route path="/samvat" element={<SamvatConverter />} />
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/settings" element={<SettingsPage />} />
-              <Route path="*" element={<PlaceholderPage title="Page Not Found" />} />
-            </Routes>
-            <Footer />
+            <AnimatedRoutes />
           </DateProvider>
         </LocationProvider>
       </ThemeProvider>

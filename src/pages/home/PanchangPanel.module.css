@@ -1,19 +1,26 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: 0;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: var(--space-2) 0;
+  padding: var(--space-2) var(--space-2);
   border-bottom: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+  margin: 0 calc(-1 * var(--space-2));
 }
 
 .row:last-child {
   border-bottom: none;
+}
+
+.row:hover {
+  background: var(--surface-highlight);
 }
 
 .labelCol {
